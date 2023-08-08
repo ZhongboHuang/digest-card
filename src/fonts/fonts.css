@@ -1,0 +1,17 @@
+@font-face {
+  font-family: 'cloud-bold';
+  src: url('./仓耳云黑.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'cloud-light';
+  src: url('./仓耳今楷.ttf') format('truetype');
+}
+
+.cloud-bold {
+  font-family: 'cloud-bold';
+}
+
+.cloud-light {
+  font-family: 'cloud-light';
+}
