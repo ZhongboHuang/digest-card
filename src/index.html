@@ -10,7 +10,7 @@
     <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
     <style>
       .card {
-        width: 300px;
+        width: 400px;
         min-height: 500px;
       }
       .btn {
@@ -26,30 +26,23 @@
     <title>文摘卡片</title>
   </head>
   <body>
-    <div class="mt-8 flex items-center justify-center p-1">
-      <div class="card cloud-bold bg-black p-5 text-white">请输入文字</div>
+    <div class="flex items-center justify-center h-screen box-border">
+      <div>
+        <input type="text" id="content-input" placeholder="Content" class="border rounded p-4 w-60">
+        <div class="mt-8 flex justify-center">
+          <button class="btn p-2">Download</button>
+        </div>
+      </div>
+      <div class="ml-8">
+        <div class="flex items-center justify-center p-1">
+          <div class="card cloud-bold bg-black p-5 text-white flex items-center justify-center">
+            <div class="content break-all">content</div>
+          </div>
+        </div>
+      </div>
     </div>
-    <div class="mt-8 flex justify-center">
-      <button class="btn p-2">点击下载</button>
-    </div>
+    
   </body>
-  <script>
-    const btn = document.querySelector(".btn");
-    // 添加按钮点击事件
-    btn.addEventListener("click", () => {
-      // #capture 就是我们要获取截图对应的 DOM 元素选择器
-      html2canvas(document.querySelector(".card"), {
-        useCORS: true, // 【重要】开启跨域配置
-        scale: window.devicePixelRatio < 3 ? window.devicePixelRatio : 2,
-        allowTaint: true, // 允许跨域图片
-      }).then((canvas) => {
-        const imgData = canvas.toDataURL("image/jpeg", 1.0);
-        // 将截图后的图片下载
-        const link = document.createElement("a");
-        link.download = "截图.jpg";
-        link.href = imgData;
-        link.click();
-      });
-    });
-  </script>
+  <script src="./script/content.js"></script>
+  <script src="./script/download.js"></script>
 </html>
