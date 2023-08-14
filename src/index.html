@@ -11,7 +11,9 @@
     <style>
       .card {
         width: 400px;
-        min-height: 500px;
+        height: 823px;
+        background: url("./images/bookmark.jpg") no-repeat;
+        background-size: 100% 100%;
       }
       .btn {
         border: 1px solid #9e9e9e;
@@ -26,22 +28,26 @@
     <title>文摘卡片</title>
   </head>
   <body>
-    <div class="flex items-center justify-center h-screen box-border">
+    <div class="box-border flex h-screen items-center justify-center">
       <div>
-        <input type="text" id="content-input" placeholder="Content" class="border rounded p-4 w-60">
+        <input
+          type="text"
+          id="content-input"
+          placeholder="Content"
+          class="w-60 rounded border p-4"
+        />
         <div class="mt-8 flex justify-center">
           <button class="btn p-2">Download</button>
         </div>
       </div>
       <div class="ml-8">
         <div class="flex items-center justify-center p-1">
-          <div class="card cloud-bold bg-black p-5 text-white flex items-center justify-center">
+          <div class="card cloud-bold flex items-center justify-center p-5">
             <div class="content break-all">content</div>
           </div>
         </div>
       </div>
     </div>
-    
   </body>
   <script src="./script/content.js"></script>
   <script src="./script/download.js"></script>
