@@ -1,4 +1,4 @@
-const btn = document.querySelector(".btn");
+const btn = document.querySelector(".download");
 function downloadListener() {
   // 添加按钮点击事件
   btn.addEventListener("click", () => {

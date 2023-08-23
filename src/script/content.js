@@ -37,6 +37,10 @@ function listenerAddTitle() {
     newTitle.className = "text-right mt-4 w-full";
     newTitle.innerHTML = value;
     content.appendChild(newTitle);
+    // 清空输入框
+    contentInput.value = "";
+    const contentNoSave = document.querySelector(".nosave");
+    contentNoSave.innerHTML = "";
   });
 }
 
